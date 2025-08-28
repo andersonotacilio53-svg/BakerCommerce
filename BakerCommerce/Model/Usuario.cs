@@ -33,9 +33,12 @@ namespace BakerCommerce.Model
             MySqlConnection con = conexaoBD.ObterConexao();
             MySqlCommand cmd = new MySqlCommand(comando, con);
 
+            // Obter o hash da senha:
+            string senhahash = EasyEncryption.SHA.ComputeSHA256Hash(Senha);
+
             // Substituir os cacteres coringas (@)
             cmd.Parameters.AddWithValue("@email", Email);
-            cmd.Parameters.AddWithValue("@Senha", Senha); //ainda falta obter o hash!
+            cmd.Parameters.AddWithValue("@Senha", senhahash); 
 
             cmd.Prepare();
             // Declarar tabela que irá receber o resultado:

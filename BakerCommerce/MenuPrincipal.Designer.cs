@@ -105,6 +105,7 @@
             this.lblDescricao.Size = new System.Drawing.Size(341, 28);
             this.lblDescricao.TabIndex = 5;
             this.lblDescricao.Text = "Olá ...., Escolha uma opção abaixo:";
+            this.lblDescricao.Click += new System.EventHandler(this.lblDescricao_Click);
             // 
             // pictureBox1
             // 
