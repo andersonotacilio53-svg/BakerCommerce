@@ -12,9 +12,11 @@ namespace BakerCommerce
 {
     public partial class FormProdutos : Form
     {
-        public FormProdutos()
+        Model.Usuario usuario;
+        public FormProdutos(Model.Usuario usuario)
         {
             InitializeComponent();
+            this.usuario = usuario;
         }
     }
 }
