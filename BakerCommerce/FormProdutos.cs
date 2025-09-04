@@ -17,6 +17,7 @@ namespace BakerCommerce
         {
             InitializeComponent();
             this.usuario = usuario;
+            listarCategoriasCmb();
         }
 
         public void listarCategoriasCmb()
@@ -32,9 +33,6 @@ namespace BakerCommerce
             }
         }
 
-        public void listaCategoriascmb()
-        {
-
-        }
+  
     }
 }

@@ -84,7 +84,7 @@
             // 
             // cmbCategoriaCadastrar
             // 
-            this.cmbCategoriaCadastrar.BackColor = System.Drawing.Color.Silver;
+            this.cmbCategoriaCadastrar.BackColor = System.Drawing.Color.White;
             this.cmbCategoriaCadastrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoriaCadastrar.FormattingEnabled = true;
             this.cmbCategoriaCadastrar.Location = new System.Drawing.Point(118, 120);
@@ -164,7 +164,7 @@
             // 
             // cmbCategoriaEditar
             // 
-            this.cmbCategoriaEditar.BackColor = System.Drawing.Color.Silver;
+            this.cmbCategoriaEditar.BackColor = System.Drawing.Color.White;
             this.cmbCategoriaEditar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoriaEditar.FormattingEnabled = true;
             this.cmbCategoriaEditar.Location = new System.Drawing.Point(121, 128);
