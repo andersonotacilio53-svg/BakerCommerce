@@ -18,5 +18,23 @@ namespace BakerCommerce
             InitializeComponent();
             this.usuario = usuario;
         }
+
+        public void listarCategoriasCmb()
+        {
+            Model.Categoria categoria = new Model.Categoria();
+            // Tabela p/ receber o resultado do SELECT:
+            DataTable tabela = categoria.Listar();
+
+            foreach (DataRow dr in tabela.Rows)
+            {
+                cmbCategoriaCadastrar.Items.Add($"{dr["id"]} - {dr["nome"]}");
+                cmbCategoriaEditar.Items.Add($"{dr["id"]} - {dr["nome"]}");
+            }
+        }
+
+        public void listaCategoriascmb()
+        {
+
+        }
     }
 }
