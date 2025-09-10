@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvProduto = new System.Windows.Forms.DataGridView();
             this.grbCadastrar = new System.Windows.Forms.GroupBox();
             this.cmbCategoriaCadastrar = new System.Windows.Forms.ComboBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.lblCategoriaCadastro = new System.Windows.Forms.Label();
-            this.txbPrecoCadastro = new System.Windows.Forms.TextBox();
-            this.lblPreco = new System.Windows.Forms.Label();
-            this.txbNomeCadastro = new System.Windows.Forms.TextBox();
+            this.txbPrecoCadastrar = new System.Windows.Forms.TextBox();
+            this.lblPrecoCadastrar = new System.Windows.Forms.Label();
+            this.txbNomeCadastrar = new System.Windows.Forms.TextBox();
             this.lblNomeCadastro = new System.Windows.Forms.Label();
             this.grbEditar = new System.Windows.Forms.GroupBox();
             this.cmbCategoriaEditar = new System.Windows.Forms.ComboBox();
@@ -46,33 +46,34 @@
             this.txbNomeEditar = new System.Windows.Forms.TextBox();
             this.lblNomeEditar = new System.Windows.Forms.Label();
             this.grbApagar = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblDescricaoApagar = new System.Windows.Forms.Label();
+            this.btnApagar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.grbCadastrar.SuspendLayout();
             this.grbEditar.SuspendLayout();
             this.grbApagar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvProduto
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(38, 83);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(736, 238);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduto.Location = new System.Drawing.Point(38, 83);
+            this.dgvProduto.Name = "dgvProduto";
+            this.dgvProduto.Size = new System.Drawing.Size(736, 238);
+            this.dgvProduto.TabIndex = 0;
+            this.dgvProduto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             // 
             // grbCadastrar
             // 
             this.grbCadastrar.Controls.Add(this.cmbCategoriaCadastrar);
             this.grbCadastrar.Controls.Add(this.btnCadastrar);
             this.grbCadastrar.Controls.Add(this.lblCategoriaCadastro);
-            this.grbCadastrar.Controls.Add(this.txbPrecoCadastro);
-            this.grbCadastrar.Controls.Add(this.lblPreco);
-            this.grbCadastrar.Controls.Add(this.txbNomeCadastro);
+            this.grbCadastrar.Controls.Add(this.txbPrecoCadastrar);
+            this.grbCadastrar.Controls.Add(this.lblPrecoCadastrar);
+            this.grbCadastrar.Controls.Add(this.txbNomeCadastrar);
             this.grbCadastrar.Controls.Add(this.lblNomeCadastro);
             this.grbCadastrar.Font = new System.Drawing.Font("Modern No. 20", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbCadastrar.Location = new System.Drawing.Point(38, 327);
@@ -101,6 +102,7 @@
             this.btnCadastrar.TabIndex = 6;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // lblCategoriaCadastro
             // 
@@ -111,30 +113,30 @@
             this.lblCategoriaCadastro.TabIndex = 4;
             this.lblCategoriaCadastro.Text = "Categoria:";
             // 
-            // txbPrecoCadastro
+            // txbPrecoCadastrar
             // 
-            this.txbPrecoCadastro.BackColor = System.Drawing.Color.Silver;
-            this.txbPrecoCadastro.Location = new System.Drawing.Point(115, 78);
-            this.txbPrecoCadastro.Name = "txbPrecoCadastro";
-            this.txbPrecoCadastro.Size = new System.Drawing.Size(224, 30);
-            this.txbPrecoCadastro.TabIndex = 3;
+            this.txbPrecoCadastrar.BackColor = System.Drawing.Color.Silver;
+            this.txbPrecoCadastrar.Location = new System.Drawing.Point(115, 78);
+            this.txbPrecoCadastrar.Name = "txbPrecoCadastrar";
+            this.txbPrecoCadastrar.Size = new System.Drawing.Size(224, 30);
+            this.txbPrecoCadastrar.TabIndex = 3;
             // 
-            // lblPreco
+            // lblPrecoCadastrar
             // 
-            this.lblPreco.AutoSize = true;
-            this.lblPreco.Location = new System.Drawing.Point(28, 81);
-            this.lblPreco.Name = "lblPreco";
-            this.lblPreco.Size = new System.Drawing.Size(68, 24);
-            this.lblPreco.TabIndex = 2;
-            this.lblPreco.Text = "Preço:";
+            this.lblPrecoCadastrar.AutoSize = true;
+            this.lblPrecoCadastrar.Location = new System.Drawing.Point(28, 81);
+            this.lblPrecoCadastrar.Name = "lblPrecoCadastrar";
+            this.lblPrecoCadastrar.Size = new System.Drawing.Size(68, 24);
+            this.lblPrecoCadastrar.TabIndex = 2;
+            this.lblPrecoCadastrar.Text = "Preço:";
             // 
-            // txbNomeCadastro
+            // txbNomeCadastrar
             // 
-            this.txbNomeCadastro.BackColor = System.Drawing.Color.Silver;
-            this.txbNomeCadastro.Location = new System.Drawing.Point(115, 33);
-            this.txbNomeCadastro.Name = "txbNomeCadastro";
-            this.txbNomeCadastro.Size = new System.Drawing.Size(224, 30);
-            this.txbNomeCadastro.TabIndex = 1;
+            this.txbNomeCadastrar.BackColor = System.Drawing.Color.Silver;
+            this.txbNomeCadastrar.Location = new System.Drawing.Point(115, 33);
+            this.txbNomeCadastrar.Name = "txbNomeCadastrar";
+            this.txbNomeCadastrar.Size = new System.Drawing.Size(224, 30);
+            this.txbNomeCadastrar.TabIndex = 1;
             // 
             // lblNomeCadastro
             // 
@@ -181,6 +183,7 @@
             this.btnEditar.TabIndex = 6;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // lblCategoriaEditar
             // 
@@ -227,8 +230,8 @@
             // 
             // grbApagar
             // 
-            this.grbApagar.Controls.Add(this.label1);
-            this.grbApagar.Controls.Add(this.button1);
+            this.grbApagar.Controls.Add(this.lblDescricaoApagar);
+            this.grbApagar.Controls.Add(this.btnApagar);
             this.grbApagar.Font = new System.Drawing.Font("Modern No. 20", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbApagar.Location = new System.Drawing.Point(42, 578);
             this.grbApagar.Name = "grbApagar";
@@ -237,30 +240,31 @@
             this.grbApagar.TabStop = false;
             this.grbApagar.Text = "Apagar";
             // 
-            // label1
+            // lblDescricaoApagar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(384, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Selecione um produto para apagar.";
+            this.lblDescricaoApagar.AutoSize = true;
+            this.lblDescricaoApagar.Font = new System.Drawing.Font("Modern No. 20", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricaoApagar.Location = new System.Drawing.Point(34, 57);
+            this.lblDescricaoApagar.Name = "lblDescricaoApagar";
+            this.lblDescricaoApagar.Size = new System.Drawing.Size(384, 25);
+            this.lblDescricaoApagar.TabIndex = 1;
+            this.lblDescricaoApagar.Text = "Selecione um produto para apagar.";
             // 
-            // button1
+            // btnApagar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Modern No. 20", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(458, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(268, 101);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Apagar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnApagar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnApagar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnApagar.FlatAppearance.BorderSize = 3;
+            this.btnApagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApagar.Font = new System.Drawing.Font("Modern No. 20", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApagar.ForeColor = System.Drawing.Color.Red;
+            this.btnApagar.Location = new System.Drawing.Point(458, 19);
+            this.btnApagar.Name = "btnApagar";
+            this.btnApagar.Size = new System.Drawing.Size(268, 101);
+            this.btnApagar.TabIndex = 0;
+            this.btnApagar.Text = "Apagar";
+            this.btnApagar.UseVisualStyleBackColor = false;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
             // pictureBox1
             // 
@@ -294,10 +298,10 @@
             this.Controls.Add(this.grbApagar);
             this.Controls.Add(this.grbEditar);
             this.Controls.Add(this.grbCadastrar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvProduto);
             this.Name = "FormProdutos";
             this.Text = "FormProdutos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
             this.grbCadastrar.ResumeLayout(false);
             this.grbCadastrar.PerformLayout();
             this.grbEditar.ResumeLayout(false);
@@ -312,13 +316,13 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvProduto;
         private System.Windows.Forms.GroupBox grbCadastrar;
-        private System.Windows.Forms.TextBox txbNomeCadastro;
+        private System.Windows.Forms.TextBox txbNomeCadastrar;
         private System.Windows.Forms.Label lblNomeCadastro;
         private System.Windows.Forms.Label lblCategoriaCadastro;
-        private System.Windows.Forms.TextBox txbPrecoCadastro;
-        private System.Windows.Forms.Label lblPreco;
+        private System.Windows.Forms.TextBox txbPrecoCadastrar;
+        private System.Windows.Forms.Label lblPrecoCadastrar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.GroupBox grbEditar;
         private System.Windows.Forms.Button btnEditar;
@@ -328,8 +332,8 @@
         private System.Windows.Forms.TextBox txbNomeEditar;
         private System.Windows.Forms.Label lblNomeEditar;
         private System.Windows.Forms.GroupBox grbApagar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnApagar;
+        private System.Windows.Forms.Label lblDescricaoApagar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbCategoriaCadastrar;

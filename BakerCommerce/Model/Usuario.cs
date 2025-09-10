@@ -133,7 +133,7 @@ namespace BakerCommerce.Model
 
         public bool Modificar()
         {
-            string comando = "UPDATE usuarios SET nome_complero = @nome_completo, " + 
+            string comando = "UPDATE usuarios SET nome_completo = @nome_completo, " + 
                 "email = @email, senha = @senha WHERE id = @id";
             Banco conexaoBD = new Banco();
             MySqlConnection con = conexaoBD.ObterConexao();
