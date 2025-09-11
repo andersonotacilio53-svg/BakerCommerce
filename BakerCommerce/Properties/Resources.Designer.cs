@@ -93,6 +93,16 @@ namespace BakerCommerce.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap code {
+            get {
+                object obj = ResourceManager.GetObject("code", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menu_padaria {
             get {
                 object obj = ResourceManager.GetObject("menu padaria", resourceCulture);

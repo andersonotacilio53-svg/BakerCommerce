@@ -119,12 +119,16 @@
     </Compile>
     <Compile Include="Model\Banco.cs" />
     <Compile Include="Model\Categoria.cs" />
+    <Compile Include="Model\OrdemComanda.cs" />
     <Compile Include="Model\Produto.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormComandas.resx">
+      <DependentUpon>FormComandas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProdutos.resx">
       <DependentUpon>FormProdutos.cs</DependentUpon>
@@ -182,6 +186,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1772772.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\code.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

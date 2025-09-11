@@ -62,7 +62,5 @@ namespace BakerCommerce
             formCaixa.ShowDialog();
 
         }
-
-
     }
 }

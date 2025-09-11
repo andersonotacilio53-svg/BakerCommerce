@@ -44,7 +44,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(57, 26);
+            this.label1.Location = new System.Drawing.Point(57, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(646, 57);
             this.label1.TabIndex = 0;
@@ -60,6 +60,7 @@
             this.btnComandas.TabIndex = 1;
             this.btnComandas.Text = "Comandas";
             this.btnComandas.UseVisualStyleBackColor = false;
+            this.btnComandas.Click += new System.EventHandler(this.btnComandas_Click);
             // 
             // btnProdutos
             // 
@@ -102,7 +103,7 @@
             this.lblDescricao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblDescricao.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescricao.ForeColor = System.Drawing.Color.Black;
-            this.lblDescricao.Location = new System.Drawing.Point(174, 111);
+            this.lblDescricao.Location = new System.Drawing.Point(170, 83);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Size = new System.Drawing.Size(341, 28);
             this.lblDescricao.TabIndex = 5;
