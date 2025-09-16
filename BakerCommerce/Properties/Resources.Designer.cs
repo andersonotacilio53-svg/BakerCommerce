@@ -73,6 +73,16 @@ namespace BakerCommerce.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap caixa {
+            get {
+                object obj = ResourceManager.GetObject("caixa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ChatGPT_Image_27_de_ago__de_2025__19_58_47 {
             get {
                 object obj = ResourceManager.GetObject("ChatGPT Image 27 de ago. de 2025, 19_58_47", resourceCulture);

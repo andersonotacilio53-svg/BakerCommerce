@@ -81,7 +81,7 @@ namespace BakerCommerce
 
                 if (ordemComanda.Cadastrar())
                 {
-                    MessageBox.Show(" Lançamento efetuar !", "Erro!",
+                    MessageBox.Show(" Lançamento Efetuado !", "Erro!",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ResetarCampos();
                 }

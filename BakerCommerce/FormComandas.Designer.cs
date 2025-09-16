@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.grbInformacao = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.grbLancamento = new System.Windows.Forms.GroupBox();
-            this.lblComanda = new System.Windows.Forms.Label();
-            this.txbComanda = new System.Windows.Forms.TextBox();
+            this.btnContinuar = new System.Windows.Forms.Button();
             this.txbCodProduto = new System.Windows.Forms.TextBox();
             this.lblCodProduto = new System.Windows.Forms.Label();
-            this.btnContinuar = new System.Windows.Forms.Button();
+            this.txbComanda = new System.Windows.Forms.TextBox();
+            this.lblComanda = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.grbLancamento = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnLancar = new System.Windows.Forms.Button();
-            this.txbQuantidade = new System.Windows.Forms.TextBox();
-            this.lblQualidadeLancamento = new System.Windows.Forms.Label();
             this.txbProduto = new System.Windows.Forms.TextBox();
+            this.txbQuantidade = new System.Windows.Forms.TextBox();
             this.lblProduto = new System.Windows.Forms.Label();
+            this.lblQualidadeLancamento = new System.Windows.Forms.Label();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.grbInformacao.SuspendLayout();
             this.grbLancamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
@@ -66,40 +66,19 @@
             this.grbInformacao.TabStop = false;
             this.grbInformacao.Text = "Informação";
             // 
-            // grbLancamento
+            // btnContinuar
             // 
-            this.grbLancamento.Controls.Add(this.btnCancelar);
-            this.grbLancamento.Controls.Add(this.btnLancar);
-            this.grbLancamento.Controls.Add(this.txbProduto);
-            this.grbLancamento.Controls.Add(this.txbQuantidade);
-            this.grbLancamento.Controls.Add(this.lblProduto);
-            this.grbLancamento.Controls.Add(this.lblQualidadeLancamento);
-            this.grbLancamento.Enabled = false;
-            this.grbLancamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbLancamento.Location = new System.Drawing.Point(12, 373);
-            this.grbLancamento.Name = "grbLancamento";
-            this.grbLancamento.Size = new System.Drawing.Size(311, 305);
-            this.grbLancamento.TabIndex = 1;
-            this.grbLancamento.TabStop = false;
-            this.grbLancamento.Text = "Lançamento";
-            // 
-            // lblComanda
-            // 
-            this.lblComanda.AutoSize = true;
-            this.lblComanda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComanda.Location = new System.Drawing.Point(7, 55);
-            this.lblComanda.Name = "lblComanda";
-            this.lblComanda.Size = new System.Drawing.Size(120, 24);
-            this.lblComanda.TabIndex = 0;
-            this.lblComanda.Text = "COMANDA:";
-            // 
-            // txbComanda
-            // 
-            this.txbComanda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbComanda.Location = new System.Drawing.Point(181, 55);
-            this.txbComanda.Name = "txbComanda";
-            this.txbComanda.Size = new System.Drawing.Size(124, 31);
-            this.txbComanda.TabIndex = 1;
+            this.btnContinuar.BackColor = System.Drawing.Color.Cyan;
+            this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContinuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContinuar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnContinuar.Location = new System.Drawing.Point(11, 203);
+            this.btnContinuar.Name = "btnContinuar";
+            this.btnContinuar.Size = new System.Drawing.Size(288, 67);
+            this.btnContinuar.TabIndex = 4;
+            this.btnContinuar.Text = "CONTINUAR";
+            this.btnContinuar.UseVisualStyleBackColor = false;
+            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
             // 
             // txbCodProduto
             // 
@@ -119,19 +98,53 @@
             this.lblCodProduto.TabIndex = 2;
             this.lblCodProduto.Text = "COD.PRODUTO:";
             // 
-            // btnContinuar
+            // txbComanda
             // 
-            this.btnContinuar.BackColor = System.Drawing.Color.Cyan;
-            this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContinuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContinuar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnContinuar.Location = new System.Drawing.Point(11, 203);
-            this.btnContinuar.Name = "btnContinuar";
-            this.btnContinuar.Size = new System.Drawing.Size(288, 67);
-            this.btnContinuar.TabIndex = 4;
-            this.btnContinuar.Text = "CONTINUAR";
-            this.btnContinuar.UseVisualStyleBackColor = false;
-            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
+            this.txbComanda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbComanda.Location = new System.Drawing.Point(181, 55);
+            this.txbComanda.Name = "txbComanda";
+            this.txbComanda.Size = new System.Drawing.Size(124, 31);
+            this.txbComanda.TabIndex = 1;
+            // 
+            // lblComanda
+            // 
+            this.lblComanda.AutoSize = true;
+            this.lblComanda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComanda.Location = new System.Drawing.Point(7, 55);
+            this.lblComanda.Name = "lblComanda";
+            this.lblComanda.Size = new System.Drawing.Size(120, 24);
+            this.lblComanda.TabIndex = 0;
+            this.lblComanda.Text = "COMANDA:";
+            // 
+            // grbLancamento
+            // 
+            this.grbLancamento.Controls.Add(this.btnCancelar);
+            this.grbLancamento.Controls.Add(this.btnLancar);
+            this.grbLancamento.Controls.Add(this.txbProduto);
+            this.grbLancamento.Controls.Add(this.txbQuantidade);
+            this.grbLancamento.Controls.Add(this.lblProduto);
+            this.grbLancamento.Controls.Add(this.lblQualidadeLancamento);
+            this.grbLancamento.Enabled = false;
+            this.grbLancamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbLancamento.Location = new System.Drawing.Point(12, 373);
+            this.grbLancamento.Name = "grbLancamento";
+            this.grbLancamento.Size = new System.Drawing.Size(311, 305);
+            this.grbLancamento.TabIndex = 1;
+            this.grbLancamento.TabStop = false;
+            this.grbLancamento.Text = "Lançamento";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Blue;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.Color.Red;
+            this.btnCancelar.Location = new System.Drawing.Point(11, 234);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(288, 65);
+            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnLancar
             // 
@@ -146,24 +159,6 @@
             this.btnLancar.UseVisualStyleBackColor = false;
             this.btnLancar.Click += new System.EventHandler(this.btnLancar_Click);
             // 
-            // txbQuantidade
-            // 
-            this.txbQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbQuantidade.Location = new System.Drawing.Point(175, 100);
-            this.txbQuantidade.Name = "txbQuantidade";
-            this.txbQuantidade.Size = new System.Drawing.Size(124, 29);
-            this.txbQuantidade.TabIndex = 8;
-            // 
-            // lblQualidadeLancamento
-            // 
-            this.lblQualidadeLancamento.AutoSize = true;
-            this.lblQualidadeLancamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQualidadeLancamento.Location = new System.Drawing.Point(7, 103);
-            this.lblQualidadeLancamento.Name = "lblQualidadeLancamento";
-            this.lblQualidadeLancamento.Size = new System.Drawing.Size(124, 24);
-            this.lblQualidadeLancamento.TabIndex = 7;
-            this.lblQualidadeLancamento.Text = "Quantidade:\r\n";
-            // 
             // txbProduto
             // 
             this.txbProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -172,6 +167,14 @@
             this.txbProduto.ReadOnly = true;
             this.txbProduto.Size = new System.Drawing.Size(124, 29);
             this.txbProduto.TabIndex = 6;
+            // 
+            // txbQuantidade
+            // 
+            this.txbQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbQuantidade.Location = new System.Drawing.Point(175, 100);
+            this.txbQuantidade.Name = "txbQuantidade";
+            this.txbQuantidade.Size = new System.Drawing.Size(124, 29);
+            this.txbQuantidade.TabIndex = 8;
             // 
             // lblProduto
             // 
@@ -182,6 +185,16 @@
             this.lblProduto.Size = new System.Drawing.Size(89, 24);
             this.lblProduto.TabIndex = 5;
             this.lblProduto.Text = "Produto:";
+            // 
+            // lblQualidadeLancamento
+            // 
+            this.lblQualidadeLancamento.AutoSize = true;
+            this.lblQualidadeLancamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQualidadeLancamento.Location = new System.Drawing.Point(7, 103);
+            this.lblQualidadeLancamento.Name = "lblQualidadeLancamento";
+            this.lblQualidadeLancamento.Size = new System.Drawing.Size(124, 24);
+            this.lblQualidadeLancamento.TabIndex = 7;
+            this.lblQualidadeLancamento.Text = "Quantidade:\r\n";
             // 
             // dgvProdutos
             // 
@@ -211,19 +224,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Blue;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.ForeColor = System.Drawing.Color.Red;
-            this.btnCancelar.Location = new System.Drawing.Point(11, 234);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(288, 65);
-            this.btnCancelar.TabIndex = 10;
-            this.btnCancelar.Text = "CANCELAR";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // FormComandas
             // 
